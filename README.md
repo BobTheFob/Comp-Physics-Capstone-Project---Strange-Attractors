@@ -1,0 +1,2 @@
+# Capstone-Project---Strange-Attractors
+We created interactive simulations and animations of the Lorenz, Rossler, and Henon attracors by solving their differential equations using Euler's and Modified Euler's method. We then compared the extent of the "butterfly effect" and noted that changes of <0.5 do not yield significant changes in the resulting figures. We also examined the 5-line fractal structure of the Henon attractor. An in-depth paper is attached which includes more ddetails about our project.
