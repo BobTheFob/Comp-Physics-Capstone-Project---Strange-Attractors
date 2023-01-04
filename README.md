@@ -24,14 +24,14 @@ yn+1 = 0.3xn
 Instead, I used recursive functions to solve the equations. Starting with the initial conditions of 0 for both x and y, we take every x and y and plug them into the equations of Figure 6 to get the next x and y values. If we repeat this process with a for loop 10,000 times, we get a data set which we can then plot to get Figure 7.
 Unlike the Lorenz and Ro ̈ssler attractor, the Henon attractor’s path is 2-Dimensional because it only has two variables.
 
-3. Animation
+Animation
 3.1. 2-Dimensional Animation
 By importing matplotlib.animation, I used the writers[’ffmpeg’] feature to render the frames of my animation. Next, I created a marker, a red circle, which represented the attractor’s position for each of the 10,000 data points. With a for loop, I set the red circle’s position at each of the points of the data set and added each frame to my animation with grabframe. I created 2-D animations of all three attractors using this method. Figure 8 shows a snapshot of the 2-D Lorenz animation. Because writers[’ffmpeg’] only accepts two-dimensional data, I was unable to create three-dimensional animations with this method, which leads us to the next step.
 
 3.2. 3-Dimensional Animation
 To make a 3-Dimensional Animation, I imported FuncAnimation from the matplot.lib.animation library. Next, I defined a function that took in my three-dimensional data sets and set the animation’s graph to a three-dimensional graph. Afterward, I wrapped my data set into a numpy array in preparation to be passed into FuncAnimation. I also created a starting point for animation using plt.plot and passed in my initial x, y, and z positions from the array. Finally, the function, array of my data, and the initial value into the parameters of FuncAnimation. FuncAnimation iterates through each value of the data set and generates a three-dimensional animation. I created 3-D animations for the Lorenz and Ro ̈ssler attractors using this method. Figure 9 shows a snapshot of the Ro ̈ssler attractor being made.
 
-4. Extensions
+Extensions
 4.1. Interactive Plots
 An idea proposed by Professor Jazaeri was to make my plots interactive. To accomplish this, I imported ipympl. I also transformed each of my graphs into subplots instead of regular plots, as this is a prerequisite for ipympl. Once made interactive, plots can be dragged around, rotated, and zoomed-in or zoomed-out. By hovering your cursor over a point, ipympl also displays the coordinates of your cursor’s position.
 
@@ -40,5 +40,5 @@ Another extension to my project was to compare Euler’s and Modified Euler’s 
 Intrigued by the noticeable differences between the two plots, I plotted the differences in values of the Euler’s and Modified Euler’s methods.
 I believe the reason why the differences in values reach up to the high thirties is because a minor change in values in the beginning of the plotting process ends up leading to vast changes later on, a trait unique to strange attractors. It is also interesting to note that the differences in values appear to follow the same trend across all three dimensions’ values.
 
-5. Conclusion
+Conclusion
 The final output of my project includes interactive 2-Dimensional and 3-Dimensional plots and animations of the Lorenz,Ro ̈ssler,andHenonattractors.ItalsoincludesacomparisonofplotssolvedusingEuler’sandModifiedEu- ler’s method. Creating and coding the algorithm to plot each of the attractors went surprisingly smooth. However, it was the animation aspect that proved difficult. I learned animation and Modified Euler’s method from scratch and spent much more time debugging my code than expected. Installing and importing ipympl for interactivity also proved challenging, as it created an implementation error that was difficult to solve. However, after hours of trial and error, all of these problems were eventually resolved. Overall, this project was extremely rewarding. It served as both an excellent way to test out the skills I learned in class and as a great way to dig into and experiment with a subject on the frontier of physics research. I aim to expand this project in the near future by plotting even more complex strange attractors and experimenting with a variety of initial conditions.
